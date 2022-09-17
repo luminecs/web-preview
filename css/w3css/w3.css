@@ -7,8 +7,7 @@ html {
   box-sizing: inherit
 }
 
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html {
+html { /* 仅 Firefox 支持 text-size-adjust，下列前缀无效果 */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%
 }
@@ -21,7 +20,7 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   display: block
 }
 
-summary {
+summary { /* 本来如此 */
   display: list-item
 }
 
@@ -29,7 +28,7 @@ audio, canvas, progress, video {
   display: inline-block
 }
 
-progress {
+progress { /* vertical-align 默认值就是 baseline */
   vertical-align: baseline
 }
 
@@ -38,11 +37,11 @@ audio:not([controls]) {
   height: 0
 }
 
-[hidden], template {
+[hidden], template { /* template 内包含不显示内容 */
   display: none
 }
 
-a {
+a { /* This is default */
   background-color: transparent
 }
 
@@ -53,7 +52,7 @@ a:active, a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted
+  text-decoration: underline dotted;
 }
 
 b, strong {
