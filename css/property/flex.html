@@ -36,7 +36,9 @@ document.getElementById('d1').style.flex = '1'
     display: flex">
   <div style="background-color:coral;" id="red">RED</div>
   <div style="background-color:lightblue;" id="blue">BLUE</div>
-  <div style="background-color:lightgreen;" id="green">Green div with more content.</div>
+  <div style="background-color:lightgreen;" id="green">Green div with more
+    content.
+  </div>
 </div>
 <script>
   function setFlex (v) {
@@ -57,10 +59,25 @@ document.getElementById('d1').style.flex = '1'
 <b>flex: 1; 表示 flex-grow: 1;</b>
 
 <h2>示例2</h2>
-<button>flex: 0 1 150px</button>
-<button>flex: 0 0 50px</button>
-<button>flex: 3 0 auto</button>
-<button>flex: 0 3 auto</button>
+<button onclick="setBlueDiv('0 1 150px')">flex: 0 1 150px</button>
+<button onclick="setBlueDiv('0 0 50px')">flex: 0 0 50px</button>
+<button onclick="setBlueDiv('3 0 auto')">flex: 3 0 auto</button>
+<button onclick="setBlueDiv('0 3 auto')">flex: 0 3 auto</button>
+<div style="height: 50px; width: 350px; border: 1px solid #c3c3c3;
+    display: flex">
+  <div style="background-color:coral;">red div</div>
+  <div id="blue-div" style="background-color:lightblue;">blue div</div>
+  <div style="background-color:khaki;">yellow div</div>
+  <div style="background-color:pink;">pink div</div>
+</div>
+<script>
+  function setBlueDiv (v) {
+    document.getElementById('blue-div').style.flex = v
+  }
+</script>
+
+<h2>示例3</h2>
+
 
 </body>
 </html>

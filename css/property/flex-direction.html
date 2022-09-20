@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-direction</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-direction 属性</h1>
+<p>
+  此属性用于设置 flexible 元素的展示方向。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-direction: row(default value)|row-reverse|column
+  |column-reverse|initial|inherit
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('d').style.flexDirection = 'column'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="setDirection('row')">row</button>
+<button onclick="setDirection('row-reverse')">row-reverse</button>
+<button onclick="setDirection('column')">column</button>
+<button onclick="setDirection('column-reverse')">column-reverse</button>
+<div id="d"
+  style="border: 1px solid #c3c3c3; height: 300px; width: 300px;
+    display: flex;">
+  <div style="height: 50px; width: 50px; background-color:coral;">A</div>
+  <div style="height: 50px; width: 50px; background-color:lightblue;">B</div>
+  <div style="height: 50px; width: 50px; background-color:khaki;">C</div>
+  <div style="height: 50px; width: 50px; background-color:pink;">D</div>
+  <div style="height: 50px; width: 50px; background-color:lightgrey;">E</div>
+  <div style="height: 50px; width: 50px; background-color:lightgreen;">F</div>
+</div>
+<script>
+  function setDirection (v) {
+    document.getElementById('d').style.flexDirection = v
+  }
+</script>
+
+</body>
+</html>
