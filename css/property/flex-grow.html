@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-grow</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-grow 属性</h1>
+<p>
+  此属性设置当前元素相对于(相同盒子里)其他元素增加多少。
+  父元素盒子必须设置 display: flex;，flex-grow 才能生效。
+  flex-grow 表示的是倍数。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-grow: 数字|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('flex-grow').style.flexGrow = '1'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="setFlex()">第二个 div 设置 flex-grow: 3</button>
+<button onclick="fillText()">填充文字</button>
+<div style="border: 1px solid #c3c3c3; width: 550px; height: 50px;
+        display: flex;">
+  <div style="flex-grow: 1; background-color: coral"></div>
+  <div style="background-color: lightblue" id="flex-grow"></div>
+  <div style="flex-grow: 1; background-color: khaki"></div>
+  <div style="flex-grow: 1; background-color: pink"></div>
+  <div style="background-color: orange">no-grow</div>
+  <div style="flex-grow: 1; background-color: lightgrey"></div>
+</div>
+<script>
+  function setFlex () {
+    let value = document.getElementById('flex-grow').style.flexGrow
+    value = !value ? '3' : ''
+    document.getElementById('flex-grow').style.flexGrow = value
+  }
+  function fillText () {
+    let value = document.getElementById('flex-grow').innerText
+    value = !value ? '填充文字填充文字填充文字' : ''
+    document.getElementById('flex-grow').innerText = value
+  }
+</script>
+
+
+</body>
+</html>
