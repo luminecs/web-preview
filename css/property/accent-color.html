@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>accent-color</title>
+  <style>
+    pre {
+      font-size: 15px
+    }
+  </style>
+</head>
+<body>
+
+<h1>accent-color 属性</h1>
+<p>
+  此属性用于为页面<b>控制</b>设置强调色。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+accent-color: auto|color|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('progress').style.accentColor = 'red'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<div style="accent-color: green">
+  纯文字无效果
+</div>
+
+<h2>示例2 checkbox</h2>
+<input type="checkbox" checked style="accent-color: red"> 红色
+<input type="checkbox" checked> 蓝色（默认-auto）
+
+<h2>示例2 checkbox</h2>
+<input type="radio" checked style="accent-color: red"> 红色
+<input type="radio" checked> 蓝色（默认-auto）
+
+<h2>示例3 range</h2>
+<label>
+  红色
+  <input type="range" min="0" max="5" style="accent-color: red">
+</label>
+<label>
+  蓝色（默认-auto）
+  <input type="range" min="0" max="5">
+</label>
+
+<h2>示例4 progress</h2>
+<progress style="accent-color: red">99%</progress>
+红色
+<progress value="3" max="5">99%</progress>
+蓝色（默认-auto）
+
+<h2>示例5 JS</h2>
+<progress id="progress"></progress>
+<button onclick="fn()">换色</button>
+<script>
+  function fn () {
+    let accentColor = document.getElementById('progress').style.accentColor
+    if (accentColor === 'red') {
+      document.getElementById('progress').style.accentColor = ''
+    }
+    if (!accentColor) {
+      document.getElementById('progress').style.accentColor = 'red'
+    }
+  }
+</script>
+
+
+</body>
+</html>
