@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-shrink</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-shrink 属性</h1>
+<p>
+  此属性设置当前元素相对于(相同盒子里)其他元素收缩多少。
+  父元素盒子必须设置 display: flex;，flex-shrink 才能生效。
+  flex-shrink 表示的是缩小倍数。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-shrink: 数字|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('flex-shrink').style.flexShrink = '5'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="shrink('0')">flex-shrink: 0;</button>
+<button onclick="shrink('1')">flex-shrink: 1;(默认值)</button>
+<button onclick="shrink('2')">flex-shrink: 2;</button>
+<button onclick="shrink('3')">flex-shrink: 3;</button>
+<button onclick="shrink('4')">flex-shrink: 4;</button>
+<button onclick="shrink('5')">flex-shrink: 5;</button>
+<button onclick="shrink('initial')">flex-shrink: initial;</button>
+<div style="width: 350px; height: 50px; border: 1px solid #c3c3c3;
+      display: flex">
+  <div style="flex-basis: 100px; flex-grow: 1; flex-shrink: 1; background-color:coral;"></div>
+  <div style="flex-basis: 100px; flex-grow: 1; background-color:lightblue;" id="flex-shrink"></div>
+  <div style="flex-basis: 100px; flex-grow: 1; flex-shrink: 1; background-color:khaki;"></div>
+  <div style="flex-basis: 100px; flex-grow: 1; flex-shrink: 1; background-color:pink;"></div>
+  <div style="flex-basis: 100px; flex-grow: 1; flex-shrink: 1; background-color:lightgrey;"></div>
+</div>
+<b>
+  <p>
+    flex-shrink 需要和 flex-basis 一起使用。
+    如果只设置 flex-shrink: 1; ，则无效果。flex-grow 属性可选。
+  </p>
+  <p>
+    如果子元素 flex-basis 之和小于父元素的宽度，则 flex-shrink 无效果。
+  </p>
+</b>
+<script>
+  function shrink (v) {
+    document.getElementById('flex-shrink').style.flexShrink = v
+  }
+</script>
+
+</body>
+</html>
