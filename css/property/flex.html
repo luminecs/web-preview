@@ -13,7 +13,11 @@
 
 <h1>flex 属性</h1>
 <p>
-  flex 是 flex-grow、flex-shrink、flex-basis 的简写版本，用于
+  flex 是 flex-grow、flex-shrink、flex-basis 的简写版本，
+  用于设置 flex 布局。父元素盒子必须设置 display: flex;，flex
+  才能生效。
+  <br>
+  默认值是 0 1 auto。
 </p>
 <h3>CSS 语法</h3>
 <pre>
@@ -24,6 +28,39 @@ flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
 document.getElementById('d1').style.flex = '1'
 </pre>
 <hr>
+
+<h2>示例1</h2>
+<button onclick="setFlex('')">不设置flex</button>
+<button onclick="setFlex('1-1-1')">每个div的flex都是1</button>
+<div style="border: 1px solid #c3c3c3; height: 100px; width: 350px;
+    display: flex">
+  <div style="background-color:coral;" id="red">RED</div>
+  <div style="background-color:lightblue;" id="blue">BLUE</div>
+  <div style="background-color:lightgreen;" id="green">Green div with more content.</div>
+</div>
+<script>
+  function setFlex (v) {
+    let red = ''
+    let blue = ''
+    let green = ''
+    if (v) {
+      let arr = v.split('-')
+      red = arr[0]
+      blue = arr[1]
+      green = arr[2]
+    }
+    document.getElementById('red').style.flex = red
+    document.getElementById('blue').style.flex = blue
+    document.getElementById('green').style.flex = green
+  }
+</script>
+<b>flex: 1; 表示 flex-grow: 1;</b>
+
+<h2>示例2</h2>
+<button>flex: 0 1 150px</button>
+<button>flex: 0 0 50px</button>
+<button>flex: 3 0 auto</button>
+<button>flex: 0 3 auto</button>
 
 </body>
 </html>
