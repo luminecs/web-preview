@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-flow</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-flow 属性</h1>
+<p>
+  flex-flow 是 flex-direction 和 flex-wrap 的缩写。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-flow: flex-direction flex-wrap|initial|inherit
+默认值是 row nowrap
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('main').style.flexFlow = 'column-reverse wrap'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="flexFlow('row nowrap')">
+  flex-flow: row nowrap
+</button>
+<button onclick="flexFlow('row wrap')">
+  flex-flow: row wrap
+</button>
+<button onclick="flexFlow('row-reverse nowrap')">
+  flex-flow: row-reverse nowrap
+</button>
+<button onclick="flexFlow('row-reverse wrap')">
+  flex-flow: row-reverse wrap
+</button>
+<button onclick="flexFlow('column nowrap')">
+  flex-flow: column nowrap
+</button>
+<button onclick="flexFlow('column wrap')">
+  flex-flow: column wrap
+</button>
+<button onclick="flexFlow('column-reverse nowrap')">
+  flex-flow: column-reverse nowrap
+</button>
+<button onclick="flexFlow('column-reverse wrap')">
+  flex-flow: column-reverse wrap
+</button>
+<div id="main"
+    style="border: 1px solid #c3c3c3; height: 200px; width: 200px;
+      display: flex">
+  <div style="height: 50px; width: 50px; background-color:coral;">A</div>
+  <div style="height: 50px; width: 50px; background-color:lightblue;">B</div>
+  <div style="height: 50px; width: 50px; background-color:khaki;">C</div>
+  <div style="height: 50px; width: 50px; background-color:pink;">D</div>
+  <div style="height: 50px; width: 50px; background-color:lightgrey;">E</div>
+  <div style="height: 50px; width: 50px; background-color:lightgreen;">F</div>
+</div>
+<script>
+  function flexFlow (v) {
+    document.getElementById('main').style.flexFlow = v
+  }
+</script>
+
+</body>
+</html>
