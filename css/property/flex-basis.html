@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-basis</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-basis 属性</h1>
+<p>
+  此属性用于设置 flexible 元素的初始长度。
+  父元素盒子必须设置 display: flex;，flex-basis 才能生效。
+  <br>
+  默认值是 auto。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-basis: 数字+'px'|auto|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('flex-basis').style.flexBasis = '20px'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="setFlexBasis('20px')">flex-basis: 20px;</button>
+<button onclick="setFlexBasis('50px')">flex-basis: 50px;</button>
+<button onclick="setFlexBasis('200px')">flex-basis: 200px;</button>
+<button onclick="zero()">flex-grow: 0; flex-shrink: 0;</button>
+<div style="width: 300px; height: 100px; border: 1px solid #c3c3c3;
+      display: flex">
+  <div style="flex-basis: 50px; background-color:coral;" class="zero">50px</div>
+  <div style="flex-basis: 50px; background-color:lightblue;" id="flex-basis" class="zero">50px</div>
+  <div style="flex-basis: 50px; background-color:khaki;" class="zero">50px</div>
+  <div style="flex-basis: 50px; background-color:pink;" class="zero">50px</div>
+  <div style="flex-basis: 50px; background-color:lightgrey;" class="zero">50px</div>
+</div>
+<script>
+  function setFlexBasis (v) {
+    document.getElementById('flex-basis').style.flexBasis = v
+    document.getElementById('flex-basis').innerText = v
+  }
+  function zero () {
+    let array = document.getElementsByClassName('zero')
+    for (let arrayElement of array) {
+      arrayElement.style.flexGrow = '0'
+      arrayElement.style.flexShrink = '0'
+    }
+  }
+</script>
+
+</body>
+</html>
