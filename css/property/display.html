@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>display</title>
+  <style>
+    pre {
+      font-size: 15px
+    }
+  </style>
+</head>
+<body>
+
+<h1>display 属性</h1>
+<p>
+  此属性用于控制元素的展示方式。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+display: inline|block|contents|flex|grid|inline-block|inline-flex
+  |inline-grid|inline-table|list-item|run-in|table|table-caption
+  |table-column-group|table-header-group|table-footer-group
+  |table-row-group|table-cell|table-column|table-row
+  |none|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('d1').style.display = 'none'
+</pre>
+<hr>
+
+<h2>示例1 display: none|inline|block|inline-block|list-item</h2>
+<button onclick="setD1Display('none')">display: none</button>
+<button onclick="setD1Display('inline')">display: inline</button>
+<button onclick="setD1Display('block')">display: block</button>
+<button onclick="setD1Display('inline-block')">display: inline-block</button>
+<button onclick="setD1Display('list-item')">display: list-item</button>
+<div style="margin-left: 20px">
+  前不见古人，<p id="d1" style="color: red">后不见来者。</p>
+  念天地之悠悠，独怆然而涕下。
+</div>
+<script>
+  function setD1Display (value) {
+    document.getElementById('d1').style.display = value
+  }
+</script>
+
+<h2>示例2 display: contents</h2>
+<button onclick="disappearBox(true)">设置 display: contents</button>
+<button onclick="disappearBox(false)">取消 display: contents</button>
+<div style="width: 200px; height: 200px; background: #bbb">
+  outerBox
+  <div id="wrap" style="border: 2px solid red; padding: 20px;
+    box-sizing: border-box; background: #997171">
+    currentBox
+    <div style="border: 2px solid green; padding: 20px;
+      box-sizing: border-box; background: #619e61">
+      innerBox
+    </div>
+  </div>
+</div>
+<script>
+  function disappearBox (yes) {
+    // let style =
+    //   'border: 2px solid red; padding: 20px; box-sizing: border-box;'
+    let value = ''
+    if (yes) {
+      value = 'contents'
+    }
+    document.getElementById('wrap').style.display = value
+  }
+</script>
+<b>
+  display: contents 展示的是所有子元素，而不再展示当前的盒子，
+  即当前盒子的所有样式都失效了。
+</b>
+<p style="width: 120px; line-height: 64px; text-align: center;
+    background-color: #ddd; border: 2px solid #666;">
+  Button
+</p>
+<p style="width: 120px; line-height: 64px; text-align: center;
+    background-color: #ddd; border: 2px solid #666;">
+  <button>Button</button>
+</p>
+<p style="width: 120px; line-height: 64px; text-align: center;
+    background-color: #ddd; border: 2px solid #666;">
+  <button style="display: contents">Button</button>
+</p>
+
+<h2>示例3 display: inline|inherit</h2>
+<button onclick="setInherit()">设置/取消 display: inherit</button><br>
+<div style="display: inline">
+  <p style="display: inherit">段落1！</p>
+  <p id="inherit">观察此段！</p>
+  <p style="display: inherit">段落2！</p>
+  <p style="display: inherit">段落3！</p>
+</div>
+<script>
+  function setInherit () {
+    let value = document.getElementById('inherit').style.display
+    value = !value ? 'inherit' : ''
+    document.getElementById('inherit').style.display = value
+  }
+</script>
+
+<h2>示例4 display: flex</h2>
+<button onclick="setDisplayFlex()">
+  设置/取消 display: flex
+</button>
+<button onclick="setFlexRowReverse()">
+  设置/取消 flex-direction: row-reverse
+  (只有在设置 display: flex 水平排列后才生效)
+</button>
+<div id="flexDemo"
+  style="border: 1px solid #c3c3c3; width: 400px; height: 400px;">
+  <div style="width: 50px; height: 50px; background: coral;">A</div>
+  <div style="width: 50px; height: 50px; background: lightblue;">B</div>
+  <div style="width: 50px; height: 50px; background: khaki;">C</div>
+  <div style="width: 50px; height: 50px; background: pink;">D</div>
+  <div style="width: 50px; height: 50px; background: lightgrey;">E</div>
+  <div style="width: 50px; height: 50px; background: lightgreen;">F</div>
+</div>
+<script>
+  function setDisplayFlex () {
+    let value = document.getElementById('flexDemo').style.display
+    value = !value ? 'flex' : ''
+    document.getElementById('flexDemo').style.display = value
+  }
+  function setFlexRowReverse () {
+    let value = document.getElementById('flexDemo').style.flexDirection
+    value = !value ? 'row-reverse' : ''
+    document.getElementById('flexDemo').style.flexDirection = value
+  }
+</script>
+
+</body>
+</html>
