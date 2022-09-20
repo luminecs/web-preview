@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-wrap</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>flex-wrap 属性</h1>
+<p>
+
+</p>
+<h3>CSS 语法</h3>
+<pre>
+flex-wrap: nowrap(default value)|wrap|wrap-reverse
+  |initial|inherit
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('main').style.flexWrap = 'wrap-reverse'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="wrap('nowrap')">nowrap</button>
+<button onclick="wrap('wrap')">wrap</button>
+<button onclick="wrap('wrap-reverse')">wrap-reverse</button>
+<div id="main"
+     style="border: 1px solid #c3c3c3; height: 200px; width: 200px;
+      display: flex">
+  <div style="height: 50px; width: 50px; background-color:coral;">A</div>
+  <div style="height: 50px; width: 50px; background-color:lightblue;">B</div>
+  <div style="height: 50px; width: 50px; background-color:khaki;">C</div>
+  <div style="height: 50px; width: 50px; background-color:pink;">D</div>
+  <div style="height: 50px; width: 50px; background-color:lightgrey;">E</div>
+  <div style="height: 50px; width: 50px; background-color:lightgreen;">F</div>
+</div>
+<script>
+  function wrap (v) {
+    document.getElementById('main').style.flexWrap = v
+  }
+</script>
+
+
+</body>
+</html>
