@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>float</title>
+</head>
+<body>
+
+<h1>float 属性</h1>
+<p>
+  此属性用来使当前元素浮动到左侧、右侧或者不浮动。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+float: none(default value)|left|right|initial|inherit
+</pre>
+<h3>JS 语法</h3>
+<pre>
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="float('none')">float: none</button>
+<button onclick="float('left')">float: left</button>
+<button onclick="float('right')">float: right</button>
+<p>
+  <img id="img" src="images/pineapple.jpg" alt="pineapple" style="height: 150px">
+  青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。
+  虽有槁暴，不复挺者，輮使之然也。
+  故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。
+  故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。
+  干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。
+  靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。
+</p>
+<script>
+  function float (v) {
+    document.getElementById('img').style.float = v
+  }
+</script>
+
+</body>
+</html>
