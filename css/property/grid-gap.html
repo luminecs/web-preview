@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>grid-template-rows</title>
+  <title>grid-gap</title>
   <style>
     pre {
       font-size: 15px;
@@ -11,24 +11,25 @@
 </head>
 <body>
 
-<h1>grid-template-rows 属性</h1>
+<h1>grid-gap 属性</h1>
 <p>
-  此属性用来指定网格布局的行高。
+  grid-gap 是 grid-row-gap 和 grid-column-gap 的缩写。
+  <br>
+  <b>CSS3 已经把 grid-gap 重命名为 gap。</b>
 </p>
 <h3>CSS 语法</h3>
 <pre>
-grid-template-rows: none|auto|max-content|min-content
-  |长度|initial|inherit;
+grid-gap: grid-row-gap grid-column-gap;
+默认值是 0 0。
 </pre>
 <h3>JS 语法</h3>
 <pre>
-document.getElementById('main').style.gridTemplateRows = '100px 300px'
+document.getElementById('main').style.gridGap = '10px'
 </pre>
 <hr>
 
 <h2>示例1</h2>
 <a href="grid.html#e1">参见 grid</a>
-
 
 </body>
 </html>
