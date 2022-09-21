@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>grid-template-rows</title>
+  <style>
+    pre {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>grid-template-rows 属性</h1>
+<p>
+  此属性用来指定网格布局的行高。
+</p>
+<h3>CSS 语法</h3>
+<pre>
+grid-template-rows: none|auto|max-content|min-content
+  |长度|initial|inherit;
+</pre>
+<h3>JS 语法</h3>
+<pre>
+document.getElementById('main').style.gridTemplateRows = '100px 300px'
+</pre>
+<hr>
+
+<h2>示例1</h2>
+<button onclick="gridTemplateRows('none')">
+  grid-template-rows: none
+</button>
+<button onclick="gridTemplateRows('100px')">
+  grid-template-rows: 100px
+</button>
+<button onclick="gridTemplateRows('100px 300px')">
+  grid-template-rows: 100px 300px
+</button>
+<br>
+<button onclick="gridTemplateColumns('')">
+  grid-template-columns:
+</button>
+<button onclick="gridTemplateColumns('150px 250px')">
+  grid-template-columns: 150px 250px
+</button>
+<button onclick="gridTemplateColumns('150px auto')">
+  grid-template-columns: 150px auto
+</button>
+<button onclick="gridTemplateColumns('auto auto auto auto')">
+  grid-template-columns: auto auto auto auto
+</button>
+<br>
+<button onclick="gridGap('')">grid-gap: </button>
+<button onclick="gridGap('10px')">grid-gap: 10px</button>
+<button onclick="gridGap('20px')">grid-gap: 20px</button>
+<button onclick="gridGap('10px 20px')">grid-gap: 10px 20px</button>
+<button onclick="gridGap('20px 10px')">grid-gap: 20px 10px</button>
+<div id="main"
+     style="display: grid; background-color: #2196F3; padding: 10px;">
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">1
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">2
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">3
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">4
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">5
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">6
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">7
+  </div>
+  <div style="background-color: rgba(255, 255, 255, 0.8);
+        text-align: center; padding: 20px 0; font-size: 30px;">8
+  </div>
+</div>
+<script>
+  function gridTemplateRows (v) {
+    document.getElementById('main').style.gridTemplateRows = v
+  }
+  function gridTemplateColumns (v) {
+    document.getElementById('main').style.gridTemplateColumns = v
+  }
+  function gridGap (v) {
+    document.getElementById('main').style.gridGap = v
+  }
+</script>
+
+
+</body>
+</html>
