@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>title-preview-author-media-flipped</title>
+  <link rel="stylesheet" href="tachyons.css">
+  <style>
+    @media screen and (min-width: 60em){
+      .ph0-l {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +30,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/cpu.jpg"
+        <img src="img/cpu.jpg"
              alt="Photo of a dimly lit room with a computer interface terminal.">
       </div>
     </div>
@@ -38,7 +48,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/whale.jpg"
+        <img src="img/whale.jpg"
              alt="Photo of a whale's tale coming crashing out of the water.">
       </div>
     </div>
@@ -58,7 +68,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/warehouse.jpg" alt="Photo of a warehouse with stacked shelves.">
+        <img src="img/warehouse.jpg" alt="Photo of a warehouse with stacked shelves.">
       </div>
     </div>
     <p>By <span>Imelda Clancy</span></p>
@@ -69,8 +79,15 @@
 <hr>
 
 <h1>HTML with CSS</h1>
-<section style="max-width: 48rem; ">
-  <h2>News</h2>
+<section style="
+        max-width: 48rem;
+        margin-left: auto; margin-right: auto; /* center */
+">
+  <h2 class="ph0-l"
+    style="
+      font-family: athelas, georgia, serif; /* athelas */
+      padding-left: 1rem; padding-right: 1rem; /* ph3 */
+  ">News</h2>
   <article>
     <div>
       <div>
@@ -82,7 +99,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/cpu.jpg"
+        <img src="img/cpu.jpg"
              alt="Photo of a dimly lit room with a computer interface terminal.">
       </div>
     </div>
@@ -100,7 +117,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/whale.jpg"
+        <img src="img/whale.jpg"
              alt="Photo of a whale's tale coming crashing out of the water.">
       </div>
     </div>
@@ -120,7 +137,7 @@
         </p>
       </div>
       <div>
-        <img src="http://mrmrs.github.io/photos/warehouse.jpg" alt="Photo of a warehouse with stacked shelves.">
+        <img src="img/warehouse.jpg" alt="Photo of a warehouse with stacked shelves.">
       </div>
     </div>
     <p>By <span>Imelda Clancy</span></p>
@@ -174,5 +191,6 @@
   <li>vw 表示窗口宽度的 1%，如果元素 width = 10vw，则元素宽度 = 窗口宽度的 10%</li>
 </ul>
 
+<a href="https://unpkg.com/tachyons/css/tachyons.css" target="_blank">tachyons.css</a>
 </body>
 </html>
