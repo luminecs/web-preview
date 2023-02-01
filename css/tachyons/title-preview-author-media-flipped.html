@@ -131,14 +131,27 @@
 <hr>
 
 <h1>笔记</h1>
+<h2>绝对长度：px in cm</h2>
+<ul>
+  <li>px: 像素</li>
+  <li>in: 英寸 1inch = 96px</li>
+  <li>cm: 1cm = 37.8px = 25.2/64in</li>
+</ul>
 
+
+<h2>相对长度：em rem vw</h2>
+<p>优先使用相对长度，尤其是 font-size</p>
 <ul>
   <li>
-    rem 是基于根元素的 font-size 计算得来的。https://www.freecodecamp.org/chinese/news/what-is-rem-in-css/
+    em 在处理 font-size 时，与父元素的字体大小有关；
+    在处理其他属性，例如 height 时，与元素自身字体大小有关
+  </li>
+  <li>
+    rem 是基于根元素的 font-size 计算得来的。
     <p>
       说明：
     <pre>
-    html {
+    html { // 或者通过伪类 :root
       font-size: 18px; // 默认值是 16px
     }
     p {
@@ -158,6 +171,7 @@
       </pre>
     </p>
   </li>
+  <li>vw 表示窗口宽度的 1%，如果元素 width = 10vw，则元素宽度 = 窗口宽度的 10%</li>
 </ul>
 
 </body>
