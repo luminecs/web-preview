@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四分钟入门网页设计</title>
+  <!-- other meta -->
+  <!-- css -->
+</head>
+<body>
+<!-- 网页头部 -->
+<header id="header">
+ <img src="../css/tachyons/img/avatar.jpg" id="logo" alt="四分钟入门网页设计图标">
+  <h1>四分钟入门网页设计</h1>
+  <p>
+    <a href="https://luminecs.github.io/web-preview">by luminecs</a>
+  </p>
+</header>
+<!-- 网页主要部分 -->
+<main>
+  <!-- 第一段 缘起 -->
+  <section id="start">
+    <p>
+      你有一个产品，或者一个想法，现在你想要在<em>自己</em>的网站上展示并分享给别人。在发布到互联网之前，你想让它看起来很有吸引力、很专业，或者至少看起来是体面的。
+    </p>
+    <p>
+      你<a class="step" data-step="0" href="#content">首先应该做什么</a>呢？
+    </p>
+  </section>
+  <!-- 第二段 内容 -->
+  <section id="content">
+    <h2>内容</h2>
+    <p>
+      <strong>设计</strong>的目的在于增强内容的展示。这听起来好像是显而易见的，但是作为网站<strong>最主要</strong>的组成部分--内容，它不应该建立在事后的想法上，即应该提前考虑内容的展示。
+    </p>
+    <p>
+      编写内容，就像你现在正在阅读的段落一样，组成整个互联网的 90% 的部分。给这样的文本内容调整样式将会占用很多时间。
+    </p>
+    <p>
+      假设你已经完成了你想要发布的内容，并且也已经创建了一个空的 <code>style.css</code> 文件，你应该写的<a class="step" data-step="1" href="#centering">第一个样式</a>是什么呢？
+    </p>
+  </section>
+  <!-- 第三段 居中 -->
+  <section id="centering">
+    <h2>居中</h2>
+    <p>
+      多行文本很难被转换，因而难以<strong>阅读</strong>。设置每行的字符数限制将会大大地增强可读性、提升文字的吸引力。
+    </p>
+<pre>
+<span class="selector">body</span> {
+  <span class="attribute">margin</span>: <span class="number">0</span> auto;
+  <span class="attribute">max-width</span>: <span class="number">50</span><span class="unit">em</span>;
+}
+</pre>
+    <p>在给<em>文本块</em>设置样式之后，如何给<a href="#font-family">文字本身</a>设置样式呢？</p>
+  </section>
+  <!-- 第四段 字体 -->
+  <section id="font-family">
+    <h2>字体（Font Family）</h2>
+    <p>
+      浏览器默认字体是 <code>"Times"</code>，看起来没有一点吸引力，主要是因为这是一种未经样式修改（unstyled）的字体。切换到类似 <code>"Helvetica"</code> 或 <code>"Arial"</code> 的<strong>有衬线字体（sans-serif）</strong>，将极大地提升网页视觉。
+<pre>
+<span class="selector">body</span> {
+  <span class="attribute">font-family</span>: <span class="string">"Helvetica"</span>, <span class="string">"Arial"</span>, sans-serif;
+}
+</pre>
+    </p>
+  </section>
+</main>
+
+</body>
+</html>
